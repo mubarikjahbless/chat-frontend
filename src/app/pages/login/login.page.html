@@ -12,7 +12,7 @@
             <input matInput type="password" name="password" [(ngModel)]="credentials.password" required minlength="6">
           </mat-form-field>
           <div class="padding">
-            <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Login</button>
+            <button mat-raised-button class="log" color="primary" type="submit" [disabled]="f.invalid">Login</button>
             <button hidden type="submit" [disabled]="f.invalid"></button>
             <button mat-button routerLink="/sign-up">Sign Up</button>
           </div>

@@ -17,7 +17,7 @@
             <input matInput type="password" name="confirmPassword" [(ngModel)]="credentials.confirmPassword" [required]="true" minlength="6">
           </mat-form-field>
           <div class="padding">
-            <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Sign Up</button>
+            <button mat-raised-button class="reg" color="primary" type="submit" [disabled]="f.invalid">Sign Up</button>
             <button hidden type="submit" [disabled]="f.invalid"></button>
             <button mat-button routerLink="/login">Login</button>
           </div>

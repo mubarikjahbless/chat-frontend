@@ -1,7 +1,7 @@
 @if (openChat){
 <div class="chat-container">
   <div *ngFor="let message of messages">
-   @if(message?.sender?.id===authService.currentUser.id ||message.sender===authService.currentUser.id ){
+   @if(message?.sender?._id===authService.currentUser.id ||message.sender===authService.currentUser.id ){
     <div class="message right">
       <div class="message-content">{{ message.content.text }}</div>
      </div>
