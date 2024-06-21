@@ -1,0 +1,22 @@
+.drawer-container {
+    display: flex;
+    height: 100%;
+
+  }
+  
+  .side-bar{
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+
+  .chat-area{
+    height: 80%;
+  }
+
+  .main-content {
+    flex: 70%;
+    background-color: white;
+    height: 100%;
+    overflow: hidden;
+  }
