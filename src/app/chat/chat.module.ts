@@ -17,6 +17,7 @@ import { TruncatePipe } from './truncate.pipe';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChatAreaComponent } from './chat-area/chat-area.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
     MatMenuModule,
     MatIconModule,
     MatCardModule,
+    MatTabsModule,
     MatSidenavModule,
     MatButtonToggleModule,
     MatFormFieldModule,

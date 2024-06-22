@@ -4,7 +4,7 @@ import { ChatModelService } from '../../services/chat/chat-manager-service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   infoOpen = false; // Info sidebar is closed by default

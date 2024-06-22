@@ -1,29 +1,32 @@
 @if (openChat){
-<div class="chat-container">
-  <div *ngFor="let message of messages">
-   @if(message?.sender?._id===authService.currentUser.id ||message.sender===authService.currentUser.id ){
-    <div class="message right">
-      <div class="message-content">{{ message.content.text }}</div>
-     </div>
-   }@else { 
-      <div class="message left">
-        <div class="message-content">
-          <h3 style="background-color: green;">{{message.sender.name}}:</h3>
-          {{ message.content.text }}
-        </div>
-      </div>
+<div class="content">
+  <app-header></app-header>
+
+  <div class="messages">
+    <ul *ngFor="let message of messages">
+      
+      @if(message?.sender?._id===authService.currentUser.id ||message.sender===authService.currentUser.id ){
+        <li class="replies">
+          <p>{{ message.content.text }}</p>
+        </li>
+      }@else { 
+        <li class="sent">
+          <p> <span style="color:#2ecc71 ;">{{message?.sender?.name}}: 2:12</span><br>
+            {{ message.content.text }}</p>
+        </li>
+      
     }
-</div>
+    </ul>
   </div>
   
-  <div class="chat-input">
-    <mat-form-field class="input-field">
-      <textarea matInput [(ngModel)]="message" placeholder="Type your message..."></textarea>
-    </mat-form-field>
-    <button mat-icon-button (click)="onSendMessage()">
-      <mat-icon>send</mat-icon>
-    </button>
+  <div class="message-input">
+    <div class="wrap">
+    <input type="text" [(ngModel)]="message" placeholder="Write your message..." />
+    <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+    <button (click)="onSendMessage()"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
   </div>
+</div>
 }@else {
-   <p class="empty-chat">Select channel or a friend to chat</p>
+  <p class="empty-chat">Select channel or a friend to chat</p>
 }

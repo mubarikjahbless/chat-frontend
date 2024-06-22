@@ -5,9 +5,11 @@
 // tag::environment-variable[]
 export const environment = {
   production: false,
-  baseUrl: 'https://chat-ldp3.onrender.com', 
-  apiUrl1: 'http://localhost:5001/api/v1/',
-  apiUrl: 'https://chat-ldp3.onrender.com/api/v1/'
+  
+  baseUrl: 'http://localhost:5001',
+  baseUrl1: 'https://chat-ldp3.onrender.com', 
+  apiUrl: 'http://localhost:5001/api/v1/',
+  apiUrl1: 'https://chat-ldp3.onrender.com/api/v1/'
 };
 // end::environment-variable[]
 /*

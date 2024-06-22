@@ -13,7 +13,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-chat-area',
   templateUrl: './chat-area.component.html',
-  styleUrls: ['./chat-area.component.css']
+  styleUrls: ['./chat-area.component.scss']
 })
 export class ChatAreaComponent implements OnInit{
   #currentSelectedChat!: SelectedChat;
@@ -46,7 +46,7 @@ export class ChatAreaComponent implements OnInit{
    }
   ngOnInit(): void {
     
-    this.socket.on('message', (message:any) =>{      
+    this.socket.on('message', (message:any) =>{            
       this.messages.push(message)
     });
     

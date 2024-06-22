@@ -12,7 +12,7 @@ const routes: Routes = [
       {path: 'chat', loadChildren: () => import('./chat/chat.module').then(m => m.ChatModule)},
       ]
       },
-  {path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule), canActivate: [IsNotLoggedInGuard]}, // <2>
+  {path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule), canActivate: [IsNotLoggedInGuard]},
   {path: 'sign-up', loadChildren: () => import('./pages/sign-up/sign-up.module').then(m => m.SignUpPageModule), canActivate: [IsNotLoggedInGuard]},
 ];
 

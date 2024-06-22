@@ -10,7 +10,6 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChatModule } from './chat/chat.module';
 import { RouterModule } from '@angular/router';
-// import { APP_ROUTES } from './app.routes';
 import { AppRoutingModule } from './app-routing.module';
 
 export function tokenGetter() {
@@ -22,7 +21,6 @@ export function tokenGetter() {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // RouterModule.forRoot(APP_ROUTES),
     JwtModule.forRoot({
       config: {
         tokenGetter,
